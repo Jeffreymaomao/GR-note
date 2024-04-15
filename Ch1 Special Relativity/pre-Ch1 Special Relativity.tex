@@ -1,0 +1,565 @@
+
+% Sets the document class and font size
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=1in]{geometry}
+
+\usepackage[utf8]{inputenc}    % Input encoding
+\usepackage[T1]{fontenc}       % Font encoding
+\usepackage{fontspec}          % font encoding
+
+% Advanced math typesetting
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{physics}
+
+% Symbols and Text
+\usepackage{bbold}     % bold font
+\usepackage{ulem}      % strikethrough
+\usepackage{listings}  % Source code listing
+\usepackage{import}    % Importing code and other documents
+
+% graphics
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{tcolorbox}
+
+% figure
+\usepackage{float}
+\usepackage{subfigure}
+
+\usepackage{hyperref}  % Hyperlinks in the document
+\hypersetup{
+    colorlinks=true,
+    linkcolor=Blue,
+    filecolor=red,
+    urlcolor=Blue,
+    citecolor=blue,
+    pdftitle={Article},
+    pdfauthor={Author},
+}
+
+\usepackage{xeCJK}             % Chinese, Japanese, and Korean characters
+\setCJKfamilyfont{kai}{標楷體}
+%================================================================================================
+\begin{document}
+
+\section{Ch.1 Special Relativity (Review)} % H1 title
+
+space time $(t,\vec{x})\to$ event 
+
+for (1+1)-dim space time
+
+\underline{Fig1 - world line}
+
+An observer : with a clock and a ruler
+
+Constitutes and inertial frame
+
+\subsection{Newtonian theory} % H2 title
+
+\begin{itemize}
+	\item two observer:  $(t,x,y,z)$ and $(t',x',y',z')$
+
+\end{itemize}
+\begin{itemize}
+	\item relative speed $v$ in $x$-direction
+
+\end{itemize}
+\subsubsection{Galilean transformation} % H3 title
+
+
+\begin{equation}
+\left\{\begin{aligned}
+x &= x' + vt\\
+y &= y'\\
+z &= z'\\
+t &= t'\quad \text{(time is absolute)}\\
+\end{aligned}\right.
+\end{equation}
+
+\subsubsection{Principle of equivalence in Newton's theory} % H3 title
+
+\begin{enumerate}
+	\item For the event in $S$ and $S'$, time is absolute
+    $$    \begin{aligned}    S  &: (t,x,y,z)\\    S' &: (t',x',y',z')    \end{aligned}    $$    If we want to measure the length of a moving object
+
+\end{enumerate}
+\begin{quote}
+	We need to measure the coordinates of ends simutaneously.
+\underline{Fig2 - measure ends}
+\end{quote}
+
+\begin{enumerate}
+	\item speed
+
+\end{enumerate}
+    $$    \begin{cases}    \dot{x} = \dot{x}' + v\\    \dot{y} = \dot{y}'\\    \dot{z} = \dot{z}'\\    \end{cases}    $$
+
+\begin{enumerate}
+	\item accerleration
+
+\end{enumerate}
+    $$    \ddot{x} = \ddot{x}',    \quad \ddot{y} = \ddot{y}',    \quad \ddot{z} = \ddot{z}'    $$
+
+\subsection{Special Relativity} % H2 title
+
+\begin{quote}
+	Einstein: Two postitulates of S.R.
+P1. All inertial observers are eqivalent.
+P2. The speed of light of light $c$ is the smae for all observers ($c=299792458\,\mathrm{m/s}$).
+\end{quote}
+
+If we set $c=1$ (relativistic unit)
+
+\underline{Fig 3 - xt diagram}
+
+\subsubsection{$\odot$ Lorentz transformation (\textit{Bondi} $k$-factor)} % H3 title
+
+\begin{quote}
+	$k$ factor characterize the difference between Newton's theory and S.R.
+\end{quote}
+
+\underline{Fig4 - xt diagram with AB}
+
+so that $k=k(v)$, and it must be a linear relation between $(t,x)$ and $(t',x')$ since the free motion must be the same, i.e.
+\begin{equation}
+\text{free motion:}\quad
+\begin{cases}
+x = x_0 + u t\\
+x' = x_0' + u' t'
+\end{cases}
+\end{equation}
+\underline{Fig5 - triangle} 
+
+then if $t_1=T$ and $t_2=k^2T$ (see Fig5 - t1t2), we have
+\begin{equation}
+\begin{cases}
+t = (k^2+1)T/2\\
+x = (k^2-1)T/2\\
+\end{cases}
+\end{equation}
+since $v=x/t=(k^2-1)/(k^2+1)<1$ we have the factor
+\begin{equation}
+k=\sqrt{\frac{1+v}{1-v}}
+\end{equation}
+
+
+\begin{quote}
+	Rmk (Relativistic Doppler effect):
+The frequence $\omega = 2\pi/T$, we have
+\begin{equation}
+\begin{aligned}
+T\to T'=kT\\
+\omega \to \omega' = \omega/k
+\end{aligned}
+\end{equation}
+If $v>0\Rightarrow k>1$: $\omega'<\omega$ (red shift)
+If $v<0\Rightarrow k<1$: $\omega'<\omega$ (blue shift)
+\end{quote}
+
+In Newton's theory 
+\begin{equation}
+\begin{cases}
+x=x'+vt\\
+\dot{x} = \dot{x}' + v\quad\text{(Additoin formula)}
+\end{cases}
+\end{equation}
+\underline{Fig6 - ABC world line}
+\begin{equation}
+\begin{aligned}
+k_{AB} &= \sqrt{\frac{1+v_{AB}}{1-v_{AB}}}\\
+k_{BC} &= \sqrt{\frac{1+v_{BC}}{1-v_{BC}}}\\
+k_{AC} &= \sqrt{\frac{1+v_{AC}}{1-v_{AC}}}
+= \sqrt{\frac{(1+v_{AB})(1+v_{BC})}{(1-v_{AB})(1-v_{BC})}}\\
+\end{aligned}
+\end{equation}
+solving that 
+\begin{equation}
+v_{AC} = \frac{v_{AB}+v_{BC}}{1+v_{AB}v_{BC}} = \frac{v_{AB}+v_{BC}}{1+v_{AB}v_{BC}/c^2}
+\end{equation}
+
+
+\begin{quote}
+	example:
+if $v_{BC} = c$​, we have $\displaystyle v_{AC}=\frac{c+v_{BC}}{1+v_{BC}c/c^2} = c$
+if $v_{AC} = c$, we have $\displaystyle v_{AC}=\frac{v_{AC}+c}{1+cv_{BC}/c^2} = c$
+\end{quote}
+
+In fact,
+\begin{equation}
+v_{AV}-1 = \frac{(v_{AC}-1)(1-v_{BC})}{1+v_{AB}v_{BC}} < 0
+\end{equation}
+when $v_{AB},v_{BC}<1$: S.R. $\to$ Newton
+
+\begin{quote}
+	Rmk:
+\begin{enumerate}
+	\item massive particles $m\neq 0$: $v<1$ or $v<c$
+
+	\item Massless particle $m=1$: $v=1$ or $v=c$
+
+e.g. \textit{photon}, \textit{graviton}, ~~\textit{neutrino}~~
+\end{enumerate}
+
+\end{quote}
+What about the Relation between two space time coordinate of the same event $P$:
+
+\underline{Fig7 lorentz - transformation}
+
+by $k$-factor
+
+\begin{enumerate}
+	\item $t'-x'=k(t-x)$
+	\item $t+x=k(t'+x')$
+
+\end{enumerate}
+solving that
+\begin{equation}
+\begin{aligned}
+t' = \frac{t-vx}{\sqrt{1-v^2}}\\
+x' = \frac{x-vt}{\sqrt{1-v^2}}
+\end{aligned},\quad\text{where $(c=1)$}.
+\end{equation}
+
+
+\begin{quote}
+	Rmk:
+\begin{enumerate}
+	\item $t^2-x^2 = (t')^2 - (x')^2$ (Nom-Euclidean) It's called \textit{Minkkowski space}.
+
+	\item comparision
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{ll}
+\hline
+Galilean & Lorentz \\ \hline
+$t'=t$ & $t'=\frac{t-vx}{\sqrt{1-v^2}}$ \\
+$x'=x-vt$ & $x'=\frac{x-vt}{\sqrt{1-v^2}}$ \\
+$y'=y$ & $y'=y$ \\
+$z'=z$ & $z'= z$ \\
+\hline
+\end{tabular}
+\end{table}
+\underline{Fig8 -moving frame}
+	\item \textbf{Definition}: interval between two event $P_1$ and $P_2$:
+
+
+\end{enumerate}
+\begin{itemize}
+	\item fiinite Interval
+
+
+\begin{equation}
+s^2 = (t_2-t_1)^2 - (x_2-x_1)^2 - (y_2-y_1)^2 - (z_2-z_1)^2
+\end{equation}
+
+	\item infenitestmall interval
+
+\begin{equation}
+(ds)^2 = (dt)^2 - (dx)^2 - (dy)^2 - (dz)^2
+\end{equation}
+
+
+\end{itemize}
+\begin{enumerate}
+	\item revise the order
+
+\begin{equation}
+\begin{aligned}
+t' = \frac{t-vx/c^2}{\sqrt{1-v^2/c^2}}\\
+x' = \frac{x-vt/c^2}{\sqrt{1-v^2/c^2}}
+\end{aligned}
+\end{equation}
+
+\end{enumerate}
+\subsubsection{$\odot$ \textbf{Lorentz transformation}} % H3 title
+
+\end{quote}
+\begin{quote}
+	Einstein: Two postitulates of S.R.
+PI. All inertial observers are eqivalent.PII. The speed of light of light $c$ is the smae for all observers
+\end{quote}
+
+By PI, if a particle is free in $S$
+\begin{equation}
+\vec{r} = \vec{r}_0 + \vec{u} t \quad\Rightarrow\quad \vec{r}' = \vec{r}_0' + \vec{u}' t'
+\end{equation}
+so the transform is linear
+\begin{equation}
+\begin{pmatrix}
+ct'\\ x'\\ y'\\ z'
+\end{pmatrix}
+= L \begin{pmatrix}
+ct\\ x\\ y\\ z
+\end{pmatrix},
+\quad\text{ where } L =
+\begin{pmatrix}
+\gamma & -\gamma\beta & 0 & 0\\
+-\gamma\beta & \gamma & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1\\
+\end{pmatrix} \text{ and }
+\gamma = \frac{1}{\sqrt{1-\beta^2}}, \quad \beta = \frac{v}{c}
+\end{equation}
+By PII, 
+
+\underline{FIg9 - sphere}
+\begin{equation}
+\begin{aligned}
+I(t,x,y,z) &= (ct)^2 - x^2 - y^2 - z^2 = 0\\
+I(t',x',y',z') &= (ct')^2 - x'^2 - y'^2 - z'^2 = 0
+\end{aligned}\quad\Rightarrow\quad I = I'
+\end{equation}
+
+
+
+From boost in $x$-direction, we have $(xt')^2 - x'^2 = (xt)^2 - x^2$
+
+Introducing imaginary time $T = ict$, the equation become 
+\begin{equation}
+x^2+T^2 = x'^2 + T'^2,\quad \text{(Euclidean)}
+\end{equation}
+Now we can using a rotation to relate two coordinates
+\begin{equation}
+\begin{pmatrix}
+x' \\ T'
+\end{pmatrix}
+=
+\begin{pmatrix}
+\cos\theta & \sin\theta \\
+-\sin\theta & \cos\theta
+\end{pmatrix}\begin{pmatrix}
+x \\ T
+\end{pmatrix}
+\end{equation}
+\underline{Fig10 - rotation of coordinates}
+\begin{equation}
+\vec{r} = x\hat{x} + T\hat{t} = x' \hat{x}' + T' \hat{t}'
+\end{equation}
+then check
+\begin{equation}
+\begin{aligned}
+\hat{x}' = \cos\theta \hat{x} + \sin \theta \hat{t}\\
+\hat{T}' = -\sin\theta \hat{x} + \cos \theta \hat{t}\\
+\end{aligned}
+\end{equation}
+First we have $S'$ at rest $0'$ ($x'=0$) $\Rightarrow$ world line is $T'$-axis  $\Rightarrow$ $x\cos\theta + T\sin\theta=0$
+\begin{equation}
+v = \frac{x}{t} = \frac{icx}{T} = -ic\tan\theta
+\end{equation}
+Then we can get
+\begin{equation}
+\cos \theta = \frac{1}{\sqrt{1+\tan^2\theta}} = \frac{1}{\sqrt{1+(iv/c)^2}} = \frac{1}{\sqrt{1-v^2/{c^2}}} = \gamma
+\end{equation}
+and 
+\begin{equation}
+\sin \theta = \tan\theta \cdot \cos\theta = \gamma \cdot \frac{iv}{c}
+\end{equation}
+so the transformation become
+\begin{equation}
+\begin{pmatrix}
+x' \\ T'
+\end{pmatrix}
+=
+\begin{pmatrix}
+\gamma & \gamma iv/c \\
+-\gamma iv/c  & \gamma
+\end{pmatrix}\begin{pmatrix}
+x \\ T
+\end{pmatrix}
+\end{equation}
+that is 
+\begin{equation}
+\begin{aligned}
+x'
+&= \cos\theta x + \sin \theta T = \cos\theta (x+\tan T)\\
+&= \gamma \left(x + \frac{iv}{c}T\right) = \gamma (x-vt)\\
+t' &= \gamma (t - vx/c^2)
+\end{aligned}
+\end{equation}
+
+
+\begin{quote}
+	Rmk:
+\begin{enumerate}
+	\item in $x-T$ system, L.T. can be viewedas a rotation with $\theta$ where $\tan\theta = iv/c$
+
+	\item when $v\ll c$ , L.T. $\to$ G.T.
+
+	\item L.T. $L( v )$ forms a group
+	\item Identity $L(0) = \mathbb{I}$
+
+	\item Inverse $L^{-1}(v) = L(-v)$ $\Rightarrow$ $L(v) L(-v) = \mathbb{I}$
+
+	\item Closure $L(v')L(v) = L(v'')$: ex:
+
+\begin{equation}
+\begin{aligned}
+\tan\theta'' &= \tan(\theta+\theta') = \frac{\tan\theta + \theta'}{1- \tan\theta \tan\theta'}\\
+&= \frac{\frac{i(v+v')}{c}}{1+\frac{vv'}{c^2}} = \frac{iv''}{c}
+\Rightarrow v'' = \frac{v" v'}{1+vv'/c^2}
+\end{aligned}
+\end{equation}
+
+	\item associativity
+
+\begin{equation}
+L_3\cdot (L_2\cdot L_2) = (L_3\cdot L_2)\cdot L_1
+\quad\Leftrightarrow\quad
+\theta_3 + (\theta_2 + \theta_1) = \cdot (\theta_3 + \theta_2) + \theta_1
+\end{equation}
+
+\end{enumerate}
+\subsubsection{$\odot$ Length contraction} % H3 title
+measure the length in $S$ and $S'$ frameLet $\ell_0 = x'_B - x'_A$ at real in $S'$ called \textit{proper length}
+
+\end{quote}
+\underline{Fig11 - length contraction}
+
+measure $x_A$ and $x_B$ in $S$ at the same time $t_A=t_B$, then
+\begin{equation}
+\ell = (x_B-x_A)
+\end{equation}
+and 
+\begin{equation}
+\begin{aligned}
+x_A' = \gamma (x_A - vt)\\
+x_B' = \gamma (x_B - vt)\\
+\end{aligned}
+\quad\Rightarrow\quad
+(x_B'-x_A') = \gamma (x_B-x_A)
+\quad\Rightarrow\quad
+\ell_0 = \gamma \ell,\quad (\gamma>1\Rightarrow \ell<\ell_0)
+\end{equation}
+
+
+\subsubsection{$\odot$ time dialation} % H3 title
+
+Let $t_0$ proper-time (co-miving time) in $S'$, which means the clock is moving with the obsever.
+
+So that in $S$ we have the time interval
+\begin{equation}
+\Delta t = \gamma (\Delta t' + v\Delta '/c^2)
+\quad\Rightarrow\quad
+T = \gamma T_0 > T_0
+\end{equation}
+
+
+\begin{quote}
+	Rmk experiment 1: the particle from the universe have more life time
+\underline{Fig12 - particle from universe}
+Rmk experiment 2: clock moving very fast
+\end{quote}
+
+\subsubsection{$\odot$ velocity} % H3 title
+
+We define the velocity to be 
+\begin{equation}
+\vec{u} = \frac{d\vec{x}}{dt} = \left(u_x,u_y,u_z\right)
+= \left(\frac{du_x}{dt},\frac{du_y}{dt},\frac{du_z}{dt}\right)
+\end{equation}
+
+
+The L.T. result that 
+\begin{equation}
+\begin{cases}
+dt' = \gamma (dt - vdx/c^2)\\
+dx' = \gamma (dx - vdt/c^2)\\
+dy' = dy\\
+dz' = dz
+\end{cases}
+\end{equation}
+so the velocity 
+\begin{equation}
+u_x' = \frac{dx'}{dt'}
+= \frac{\gamma (dx-vdt)}{\gamma (dt-vdx/c^2)}
+= \frac{u_x-v}{1-vu_x/c^2}
+\end{equation}
+also 
+\begin{equation}
+u_y = \frac{u_y}{\gamma (1-u_xv/c^2)}
+,\quad
+u_z = \frac{u_z}{\gamma (1-u_xv/c^2)}
+\end{equation}
+
+
+\subsubsection{$\odot$ accerleration} % H3 title
+
+
+\begin{equation}
+{du_x} = \gamma^{-2} \frac{1}{(1+u_x'v/c^2)} du_x
+,\quad
+dt' = \gamma (dt-vdx/c^2)
+\end{equation}
+
+and 
+\begin{equation}
+dt = \gamma (dt' + vdx'/c^2) = \gamma (1+v\frac{dx'}{dt'}/c^2) dt'
+= \gamma (1+vu_x/c^2) dt'
+\end{equation}
+solving that 
+\begin{equation}
+a_x = \frac{du_x}{dt} = \gamma^{-3} \frac{1}{\left(1+u_x'v/c^2\right)^3} a_x'
+\end{equation}
+
+
+\subsubsection{$\odot$ Simultaneity (同時性)} % H3 title
+
+Simultaneity is not exist ? train 
+
+\underline{Fig13 - train}
+
+light cone
+
+\underline{Fig14 - light cone}
+
+\subsubsection{$\odot$ spacetime diagram  (real time)} % H3 title
+
+
+\begin{equation}
+\begin{aligned}
+t' &= \gamma (t-vx/c^2) &&\to ct' = \gamma (ct-vx/c)\\
+x' &= \gamma (x-vt) &&\to x' = \gamma \left(x-\frac{v}{c}(ct)\right)
+\end{aligned}
+\end{equation}
+
+\begin{quote}
+	Recall: in $S'$
+\begin{itemize}
+	\item $x'$-axis ($t'=0$) $\Rightarrow$ $\displaystyle ct=\left(\frac{v}{c}\right)x$
+	\item $t'$-axis ($x'=0$) $\Rightarrow$ $\displaystyle x=\left(\frac{v}{c}\right)ct$
+
+\end{itemize}
+\underline{FIg15 - spacetime diagram}
+
+\end{quote}
+\begin{itemize}
+	\item For $v>0$, folding the axis toward
+	\item For $v<0$, expanding the axis outward
+
+\end{itemize}
+\underline{FIg16 - spacetime diagram simultaneity}
+
+\begin{quote}
+	Rmk:
+\underline{Fig17 - contracton in space time diagram}
+\end{quote}
+
+\subsubsection{$\odot$ Calibration of length and time scale} % H3 title
+
+\underline{Fig18 - hyperbola in space time diagram }
+
+How to calibration rule and clock $\Rightarrow$ using invariant
+\begin{equation}
+x^2 - (ct)^2 = x'^2 - (ct')^2
+\end{equation}
+
+
+
+
+%================================================================================================
+\end{document}

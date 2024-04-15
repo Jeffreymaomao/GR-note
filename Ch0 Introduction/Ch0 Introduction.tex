@@ -1,0 +1,136 @@
+
+% Sets the document class and font size
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=1in]{geometry}
+
+\usepackage[utf8]{inputenc}    % Input encoding
+\usepackage[T1]{fontenc}       % Font encoding
+\usepackage{fontspec}          % font encoding
+
+% Advanced math typesetting
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{physics}
+
+% Symbols and Text
+\usepackage{bbold}     % bold font
+\usepackage{ulem}      % strikethrough
+\usepackage{listings}  % Source code listing
+\usepackage{import}    % Importing code and other documents
+
+% graphics
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{tcolorbox}
+
+% figure
+\usepackage{float}
+\usepackage{subfigure}
+
+\usepackage{hyperref}  % Hyperlinks in the document
+\hypersetup{
+    colorlinks=true,
+    linkcolor=Blue,
+    filecolor=red,
+    urlcolor=Blue,
+    citecolor=blue,
+    pdftitle={Article},
+    pdfauthor={Author},
+}
+
+\usepackage{xeCJK}             % Chinese, Japanese, and Korean characters
+\setCJKfamilyfont{kai}{標楷體}
+%================================================================================================
+\begin{document}
+
+\subsection{Ch.0 Introduction}
+
+<u>Fig 1 - theory cube</u>
+
+\textbf{Dimension Analysis}
+
+\begin{itemize}
+	\item The physical constants
+
+\end{itemize}
+	\begin{itemize}
+		\item Speed of light: $\displaystyle [c] = \frac{L}{T}$
+
+	\end{itemize}
+	\begin{itemize}
+		\item Gravitational constant: $\displaystyle [G] = \frac{L^3}{MT^2}$
+
+	\end{itemize}
+	\begin{itemize}
+		\item Planck's constant: $\displaystyle [\hbar] = \frac{ML^2}{T}$
+
+	\end{itemize}
+\begin{itemize}
+	\item The quantities
+	\begin{itemize}
+		\item Planck's Length: $\displaystyle \ell_P = \sqrt{\frac{G\hbar}{c^3}} \simeq 10^{-33}\,\mathrm{cm}$​
+		\item Planck's Time: $\displaystyle t_P = \sqrt{\frac{G\hbar}{c^5}} \simeq 10^{-44}\,\mathrm{sec}$
+		\item Planck's Mass: $\displaystyle M_P = \sqrt{\frac{c\hbar}{G}}\simeq 10^{19}\,\mathrm{GeV/c^2}$
+
+	\end{itemize}
+\textbf{Fundamental forces}
+
+\end{itemize}
+\begin{itemize}
+	\item \textit{EM force} (matter \& photon)
+	\item \textit{weak force} (nuclei decay): slow process
+	\item \textit{strong force} (binding quarks)
+	\item \textit{gravitational force} (massive particles)
+
+\end{itemize}
+<u>Fig 2 - theory tree</u>
+
+unification of fundamental force
+
+<u>Fig 3 - forces unification</u>
+
+\textbf{Equations}
+
+\begin{itemize}
+	\item Newton's laws : $\vec{F} = m\vec{a}$  (1 eqs)
+
+\end{itemize}
+\begin{itemize}
+	\item Masswell eqution (2x1+2x3 eqs)
+
+\end{itemize}
+\begin{itemize}
+	\item Schodinger equation (1 eqs)
+
+\end{itemize}
+\begin{itemize}
+	\item Einstein's equation $G_{\mu\nu} = \kappa T_{\mu\nu}$​  (4x4 eqs)
+
+\end{itemize}
+	\begin{itemize}
+		\item $G_{\mu\nu}$ : Einstein tensor (Geometry of spacetime)
+		\item $T_{\mu\nu}$​ : Energy-Momentum tensor
+
+	\end{itemize}
+\begin{quote}
+	John Wheeler (1911~2008)\\
+$\longrightarrow$ \textit{Curved spacetime tells the matter how to move}\\
+$\longleftarrow$ \textit{Matter tells the spacetime how to curved}
+\end{quote}
+
+\textbf{Notions}
+
+In our course, the Minkowski metric
+\begin{equation}
+\eta_{\mu\nu} = \operatorname{diag}([1,-1,-1,-1])
+\end{equation}
+in other (like Special Relativity) $\eta_{\mu\nu} = \operatorname{diag}([-1,1,1,1])$
+
+
+
+
+%================================================================================================
+\end{document}
