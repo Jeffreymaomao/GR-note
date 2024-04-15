@@ -1,0 +1,278 @@
+\documentclass[12pt]{article}%{revtex4}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=2cm, bottom=2cm]{geometry}
+
+
+\usepackage{bbold}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{caption}
+\usepackage{physics} 
+\usepackage{tcolorbox}
+\usepackage{import}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{subfiles}
+
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\setCJKfamilyfont{kai}{標楷體}
+
+%================================================================================================
+\begin{document}
+\begin{center}
+\textbf{\Large Introducting Relativity}
+\\\vspace{10pt}
+{Problem Set 1 (Due 2024/3/12)}
+\\\vspace{10pt}
+Chang-Mao Yang, 楊長茂(409220055), \today
+
+\vspace{5pt}
+\hrule
+\end{center}
+%-----------------------------------------------------------------------------------
+
+\begin{figure}[h]
+\centering
+\subfile{img/Fig1.tex}
+\caption{Light cone and causality of the frame $S$}
+\end{figure}
+
+\begin{enumerate}
+
+%-----------------
+\item (Causality)
+Let $E$ be the event on the light-cone and $G$ be an event outside light-cone in the inertia frame $S$.
+	\begin{enumerate}
+	\item Draw the axis of the frame $S'$ in $S$ so that $G$ occurs earlier than $O$.
+	\item Draw the axis of the frame $S''$ in $S$ so that $G$ occurs later than $O$.	\end{enumerate}
+
+\noindent\fbox{\begin{minipage}[c]{0.98\linewidth}
+%---
+The 2 drawing figure see as Figure \ref{fig:axis in S}.
+\begin{center}
+\subfile{img/Fig2.tex}
+\captionof{figure}{Axes of the frame $S'$ and $S''$ in $S$}
+\label{fig:axis in S}
+\end{center}
+%---
+\end{minipage}}
+
+\newpage
+%-----------------
+\item (Lorentz transformation) Given the Lorentz transformation in $x$-direction
+\begin{equation*}
+\begin{pmatrix}ct'\\x'\end{pmatrix}
+= 
+\begin{pmatrix}\gamma&-\beta\gamma\\-\beta\gamma&\gamma\end{pmatrix}
+\begin{pmatrix}ct\\x\end{pmatrix}
+\equiv L(v)\begin{pmatrix}ct\\x\end{pmatrix}.
+\end{equation*}
+Show that from the combination of two Lorentz transformations $L(v_2)L(v_1) = L(v)$ one has
+\begin{equation*}
+v = \frac{v_1+v_2}{1+v_1v_2/c^2}.
+\end{equation*}
+
+\noindent\fbox{\begin{minipage}[c]{0.98\linewidth}
+%---
+For two different velocities $v_1$ and $v_2$, we define $\displaystyle\gamma_i = \frac{1}{\sqrt{1-\beta_i^2}}$ where $\displaystyle \beta_i = \frac{v_i}{c}$, $i=1,2$. Also, same for the addition velocity $v$ we define $\displaystyle \gamma = \frac{1}{\sqrt{1-\beta^2}}$, where $\displaystyle\beta = \frac{v}{c}$.
+
+For convenience, we first compute
+\begin{align}
+\gamma_1\gamma_2 
+&= \frac{1}{\sqrt{1-\beta_1^2}}\frac{1}{\sqrt{1-\beta_2^2}},\\
+&= \frac{1}{\sqrt{1+\beta_1^2\beta_2^2-(\beta_1^2+\beta_2^2)}},\\
+&= \frac{1}{\sqrt{(1+2\beta_1\beta_2+\beta_1^2\beta_2^2)-(\beta_1^2+2\beta_1\beta_2+\beta_2^2)}},\\
+&= \frac{1}{\sqrt{(1+\beta_1\beta_2)^2 -(\beta_1+\beta_2)^2}},\\
+&= \frac{1}{1+\beta_1\beta_2}\frac{1}{\sqrt{1 -(\beta_1+\beta_2)^2/(1+\beta_1\beta_2)^2}}.
+\end{align}
+Now, we the product of two matrix $L(v_1)$ and $L(v_2)$ is
+\begin{align}
+L(v_1)L(v_2) 
+&= \begin{pmatrix}
+	\gamma_1			&	-\beta_1\gamma_1\\
+	-\beta_1\gamma_1	&	\gamma_1
+	\end{pmatrix}
+	\begin{pmatrix}
+	\gamma_2			&	-\beta_2\gamma_2\\
+	-\beta_2\gamma_2	&	\gamma_2
+	\end{pmatrix}\\
+&= \begin{pmatrix}
+	\gamma_1\gamma_2 + \beta_1\gamma_1\beta_2\gamma_2 
+	&
+	-\beta_2\gamma_2\gamma_1 -\beta_1\gamma_1\gamma_2
+	\\
+	-\beta_2\gamma_2\gamma_1 -\beta_1\gamma_1\gamma_2
+	&
+	\gamma_1\gamma_2 + \beta_1\gamma_1\beta_2\gamma_2
+	\end{pmatrix}\\
+&= \gamma_1\gamma_2 \begin{pmatrix}
+	1 + \beta_1\beta_1
+	&
+	-(\beta_1 + \beta_2)
+	\\
+	-(\beta_1 + \beta_2)
+	&
+	\beta_1\beta_2 + 1
+	\end{pmatrix}\\
+&= \frac{1}{1+\beta_1\beta_2}\frac{1}{\sqrt{1 -(\beta_1+\beta_2)^2/(1+\beta_1\beta_2)^2}}
+\begin{pmatrix}
+	1 + \beta_1\beta_1
+	&
+	-(\beta_1 + \beta_2)
+	\\
+	-(\beta_1 + \beta_2)
+	&
+	\beta_1\beta_2 + 1
+	\end{pmatrix}\\
+&= \frac{1}{\sqrt{1 -(\beta_1+\beta_2)^2/(1+\beta_1\beta_2)^2}}
+\begin{pmatrix}
+	1&\displaystyle -\frac{\beta_1 + \beta_2}{1+\beta_1\beta_2}
+	\\
+	\displaystyle-\frac{\beta_1 + \beta_2}{1+\beta_1\beta_2}&1.
+	\end{pmatrix}
+\end{align}
+Ones we define $L(v) = \begin{pmatrix}\gamma&-\beta\gamma\\-\beta\gamma&\gamma\end{pmatrix} = \gamma\begin{pmatrix}1&-\beta\\-\beta&1\end{pmatrix} = L(v_1)L(v_2)$, we compare the result, yield that
+\begin{equation}
+\gamma = \frac{1}{\sqrt{1-\beta^2}},\quad\text{ where } \beta = \frac{\beta_1+\beta_2}{1+\beta_1\beta_2}.
+\end{equation}
+This result shows that the addition velocity is $\displaystyle v=c\beta = \frac{c\beta_1+c\beta_2}{1+\beta_1\beta_2} = \frac{v_1+v_2}{1+v_1v_2/c^2}$.
+%---
+\end{minipage}}
+
+
+
+
+%-----------------
+\newpage
+\item (Length contraction) Let $S$ and $S'$ are inertial frames relative with $v = \alpha c$ where $0<\alpha<1$. If a rod at rest in $S'$ makes an angle of $\pi/6$ with $Ox'$ in $S'$ and $\pi/4$ with $Ox$ in $S$. Find the parameter $\alpha$.
+
+\noindent\fbox{\begin{minipage}[c]{0.98\linewidth}
+%---
+Define the length of rod to be $L$ in $S$ and $L'$ in $S'$. The length projection on $x,y$-axis in $S$ and $x,y$-axis in $S'$ are given by
+\begin{equation}
+\begin{cases}
+L_x = L \cos(\pi/4) = L\sqrt{2}/2\\
+L_y = L \sin(\pi/4) = L\sqrt{2}/2
+\end{cases}\quad\text{and}\quad
+\begin{cases}
+L'_{x} = L'\cos(\pi/6) = L'\sqrt{3}/2\\
+L'_{y} = L'\sin(\pi/6) = L'/2
+\end{cases}.
+\end{equation}
+
+\begin{center}
+\subfile{img/Fig3.tex}
+\captionof{figure}{Length contraction}
+\label{fig:length}
+\end{center}
+
+Also, notice that the projection on $y$ are the same $L_y = L_y'$(see Figure \ref{fig:length}), so we may get 
+\begin{equation}
+L_y = L'_y \quad\Rightarrow\quad L\sqrt{2}/2 = L'/2 \quad\Rightarrow\quad \sqrt{2}L = L'.
+\label{eq:length relation}
+\end{equation}
+
+According to the length contraction, we have the relation of length projection between two frames $S$ and $S'$, that is 
+\begin{equation}
+L_x' = \gamma(v)\,L_x = \frac{1}{\sqrt{1-v^2/c^2}}\,L_x = \frac{1}{\sqrt{1-\alpha^2}}\,L_x.
+\end{equation}
+Plugin the length in two frame and using the the relation of two length (\ref{eq:length relation}), we have
+\begin{equation}
+\frac{1}{\sqrt{1-\alpha^2}}
+= \frac{L'_x}{L_x} 
+= \frac{L'\sqrt{3}/2}{L\sqrt{2}/2} 
+= \frac{L\sqrt{2}\sqrt{3}/2}{L\sqrt{2}/2} 
+= \sqrt{3}
+\end{equation}
+solving the value of $\alpha$, 
+\begin{equation}
+\sqrt{1-\alpha^2} = \frac{1}{\sqrt{3}}
+\quad\Rightarrow\quad
+1-\alpha^2 = \pm \frac{1}{3}
+\quad\Rightarrow\quad
+\alpha^2 = 1 \pm \frac{1}{3}
+\quad\Rightarrow\quad
+\alpha = \pm \sqrt{1\pm \frac{1}{3}},
+\end{equation}
+we have the all possible values for $\alpha$, that is $\alpha=\pm \sqrt{1/2}, \pm \sqrt{3/2}$. However, we must have $0<\alpha<1$, so $\alpha=\sqrt{2/3}$.
+%---
+\end{minipage}}
+
+
+
+
+%-----------------
+\newpage
+\item (Aberration)A light ray from a star to a telescope observer has an inclination $\theta'$ to the horizontal in $S'$ and $\theta$ in $S$, where $S$ and $S'$ are related by speed $v$. Show that 
+\begin{equation*}
+\tan\theta' = \frac{\sin\theta}{\gamma(\cos\theta+v/c)},
+\end{equation*}
+where $\gamma = 1/\sqrt{1-v^2/c^2}$.
+
+\end{enumerate}
+
+\noindent\fbox{\begin{minipage}[c]{0.98\linewidth}
+%---
+\begin{center}
+\subfile{img/Fig4.tex}
+\captionof{figure}{Rest frame and telescope frame}
+\label{fig:length}
+\end{center}
+
+Using the addition formulae of velocity, we have 
+\begin{equation}
+u'_x=\frac{u_x+v}{1+u_xv/c^2}
+\quad\text{and}\quad
+u'_y=\frac{u_y}{\gamma(1+u_xv/c^2)}.
+\end{equation}
+So the tangent value angle $\theta'$ of the beam in $S'$ is 
+\begin{equation}
+\tan\theta' = \frac{u'_y}{u'_x}
+= \frac{\displaystyle\frac{u_y}{\gamma(1+u_xv/c^2)}}{\displaystyle\frac{u_x+v}{1+u_xv/c^2}}
+= \frac{u_y}{\gamma (u_x+v)}
+= \frac{c\sin\theta}{\gamma (c\cos\theta+v)}
+= \frac{\sin\theta}{\gamma (\cos\theta+v/c)}.
+\end{equation}
+
+
+%---
+\end{minipage}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%-----------------------------------------------------------------------------------
+\end{document}
