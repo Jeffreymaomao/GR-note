@@ -1,0 +1,184 @@
+\begin{quote}
+	Recall: Lie derivative $L_{x}T^{a\ldots}_{b\ldots}$ is a tensor
+Recall: Covariant derivative $\nabla_{c} T^{a\ldots}_{b\ldots}$ is defined by  using a affine connection $\Gamma^{a}_{bc}$
+e.g. $\nabla_{c}X^{a} = \partial_{c}X^{a} + \Gamma^{a}_{bc} X^{b}$ is a $(1,1)$-tensor, the price we need to pay is that $\Gamma^{a}_{bc}$ is NOT a tensor.
+\begin{equation}
+\nabla_{c} T = \lim_{\delta x_c \to 0} \frac{T(x')-T(x)}{\delta x_{c}}
+\end{equation}
+
+\end{quote}
+Also, if we define
+\begin{equation}
+T^{a}_{bc} = \Gamma^{a}_{bc} - \Gamma^{a}_{cb}
+\end{equation}
+is a \textit{torsion tensor} which is a $(1,2)$-type tensor.
+
+\begin{quote}
+	If $\Gamma^{a}_{bc} = \Gamma^{a}_{cb}$, the the connection is \textit{torsion free}.
+\end{quote}
+
+\subsubsection{$\odot$ Affine Geodesics} % H3 title
+
+\begin{quote}
+	A curve induced by connection
+\end{quote}
+
+$\nabla_{c} T^{a\ldots}_{b\ldots}$ covariant derivative along $\delta x_{c}$. Let $X^{a}$ be a tangent vector od $x^{a}(u)$, that is 
+\begin{equation}
+X^{a} = \frac{dx^{a}}{du}
+\end{equation}
+\underline{Fig}
+
+then $X^{c}\nabla_{c} T^{a\ldots}_{b\ldots}$ is the covariant dericative along the curve, denoted by
+\begin{equation}
+\frac{DT^{a\ldots}_{b\ldots}}{Du}
+\end{equation}
+
+
+\begin{quote}
+	Rmk:
+$X^{a}$ is a $(1,0)$-type tensor, $\nabla_{c}T^{a\ldots}_{b\ldots}$ is a $(p,q+1)$-type tensor, $X^{c}\nabla_{c}T^{a\ldots}_{b\ldots}$ is a $(p,q)$-type tensor
+\end{quote}
+
+\begin{quote}
+	\textbf{Parallel transported tensor field}
+\underline{Fig}
+i.e.
+\begin{equation}
+\frac{DT^{a\ldots}_{b\ldots}}{Du} = 0
+\end{equation}
+
+\end{quote}
+\subsubsubsection{Affien geodesic} % H4 title
+
+If a cure $x^{c}(u)$ is constructed such that the tangent vector $X^{a}$ at $x'$ is just the parallel transported vector from $x$. The curve is called \textit{affine geodesic}.
+\begin{equation}
+X^{c}\nabla_{c}X^{a} = \frac{DX^{a}}{Du} = 0
+\end{equation}
+\underline{Fig}
+\begin{equation}
+X^{c}\left(\partial_{c}X^{a} + \Gamma^{a}_{bc} X^{b}\right) = 0
+\end{equation}
+then 
+\begin{equation}
+\frac{dx^{c}}{du}\frac{\partial X^{a}}{\partial x^{c}} + \frac{dx^{c}}{du}\Gamma^{a}_{bc} \frac{dx^b}{du} = 0
+\end{equation}
+Plugin $X^{a} = dx^{a}/du^2$, we have
+\begin{equation}
+\frac{d^2x^a}{du^2} + \Gamma^{a}_{bc}\frac{dx^b}{du}\frac{dx^{c}}{du} = 0.
+\end{equation}
+
+
+\begin{quote}
+	Rmk:
+\begin{itemize}
+	\item Given a $\Gamma^{a}_{bc}$, then $x^{a}(u)$ is determined.
+	\item After reparametrized $u\to \alpha u + \beta$, the geodesic still the same.
+	\item In equation $\displaystyle \frac{d^2x^a}{du^2} + \Gamma^{a}_{bc}\frac{dx^b}{du}\frac{dx^{c}}{du} = 0$,only the symmetric part $\Gamma^{a}_{bc}$ involved
+
+\end{itemize}
+
+\end{quote}
+
+\subsection{Riemann tensor} % H2 title
+
+In Euclilean space, the derevative
+\begin{equation}
+\partial_{a}\partial_{c}T = \partial_{c}\partial_{a}T
+\end{equation}
+ is commutative. However, in non-Euclilean space, is that
+\begin{equation}
+\nabla_{a}\nabla_{c} T \stackrel{?}{=} \nabla_{c}\nabla_{a} T.
+\end{equation}
+In general, $\nabla_{a}\nabla_{c} T \neq \nabla_{c}\nabla_{a} T$, which is non-commutative. 
+
+\subsubsubsection{Second derivative} % H4 title
+
+Consider
+\begin{equation}
+\begin{cases}
+\nabla_{d}X^{a} = \partial_{d}X^{a} + \Gamma^{a}_{bd}X^{b}\\
+\nabla_{c}Y^{a}_{d} = \partial_{c}Y^{a}_{d} + \Gamma^{a}_{bc}Y^{b}_{d} - \Gamma^{b}_{dc}Y^{a}_{b}
+\end{cases}
+\end{equation}
+we can calculate the second derivative
+\begin{equation}
+\begin{aligned}
+\nabla_{c}\nabla_{d} X^{a}
+&= \nabla_{c} \left(\partial_{d}X^{a} + \Gamma^{a}_{bd}X^{b}\right)\\
+&= \partial_{c}\left(\partial_{d}X^{a} + \Gamma^{a}_{bd}X^{b}\right)
++ \Gamma^{a}_{bc}\left(\partial_{d}X^{b} + \Gamma^{b}_{ed}X^{e}\right) - \Gamma^{b}_{dc} \left(\nabla_{b}X^{a}\right)\\
+&= \partial_{c}\partial_{d}X^{a} + \partial_{c}\left(\Gamma^{a}_{bd}X^{b}\right)
++ \Gamma^{a}_{bc}\partial_{d}X^{b} + \Gamma^{a}_{bc}\Gamma^{b}_{ed}X^{e} - \Gamma^{b}_{dc} \left(\nabla_{b}X^{a}\right)\\
+&= \partial_{c}\partial_{d}X^{a}
++ X^{b}\partial_{c}\Gamma^{a}_{bd} + \Gamma^{a}_{bd}\partial_{c}X^{b}
++ \Gamma^{a}_{bc}\partial_{d}X^{b} + \Gamma^{a}_{bc}\Gamma^{b}_{ed}X^{e} - \Gamma^{b}_{dc} \left(\nabla_{b}X^{a}\right)\\
+\end{aligned}
+\end{equation}
+
+
+the the defference between second derivative, we have
+\begin{equation}
+\begin{aligned}
+\nabla_{c}\nabla_{d} X^{a} - \nabla_{d}\nabla_{c} X^{a}
+&= \left(\partial_{c}\partial_{d}X^{a}
++ X^{b}\partial_{c}\Gamma^{a}_{bd} + \Gamma^{a}_{bd}\partial_{c}X^{b}
++ \Gamma^{a}_{bc}\partial_{d}X^{b}
++ \Gamma^{a}_{bc}\Gamma^{b}_{ed}X^{e}
+- \Gamma^{b}_{dc} \nabla_{b} X^{a}\right)\\
+&\quad - \left(\partial_{d}\partial_{c}X^{a}
++ X^{b}\partial_{d}\Gamma^{a}_{bc} + \Gamma^{a}_{bc}\partial_{d}X^{b}
++ \Gamma^{a}_{bd}\partial_{c}X^{b}
++ \Gamma^{a}_{bd}\Gamma^{b}_{ec}X^{e}
+- \Gamma^{b}_{cd} \nabla_{b} X^{a}\right)\\
+&= \left(\partial_{c}\partial_{d}-\partial_{d}\partial_{c}\right)X^{a}
++ X^{b}\left(\partial_{c}\Gamma^{a}_{bd}-\partial_{d}\Gamma^{a}_{bc}\right)\\
+&\quad+ \left(\Gamma^{a}_{bd}\partial_{c}X^{b} - \Gamma^{a}_{bc}\partial_{d}X^{b}\right)
++\left(\Gamma^{a}_{bc}\partial_{d}X^{b} - \Gamma^{a}_{bd}\partial_{c}X^{b}\right)\\
+&\quad +\left(\Gamma^{a}_{bc}\Gamma^{b}_{ed}- \Gamma^{a}_{bd}\Gamma^{b}_{ec}\right)X^{e}
+- \left(\Gamma^{b}_{dc} - \Gamma^{b}_{cd}\right)\nabla_{b}X^{a}\\
+&= \left(\partial_{c}\partial_{d}-\partial_{d}\partial_{c}\right)X^{a}
++ X^{b}\left(\partial_{c}\Gamma^{a}_{bd}-\partial_{d}\Gamma^{a}_{bc}\right)\\
+&\quad +\left(\Gamma^{a}_{bc}\Gamma^{b}_{ed}- \Gamma^{a}_{bd}\Gamma^{b}_{ec}\right)X^{e}
+- \left(\Gamma^{b}_{dc} - \Gamma^{b}_{cd}\right)\nabla_{b}X^{a}
+\end{aligned}
+\end{equation}
+If $\Gamma^{a}_{bc}$ is torsion free $\Gamma^{a}_{bc} = \Gamma^{a}_{cb}$, the between second derivative is given by
+\begin{equation}
+\begin{aligned}
+\nabla_{c}\nabla_{d} X^{a} - \nabla_{d}\nabla_{c} X^{a}
+&= \left(\partial_{c}\partial_{d}-\partial_{d}\partial_{c}\right)X^{a}
++ X^{b}\left(\partial_{c}\Gamma^{a}_{bd}-\partial_{d}\Gamma^{a}_{bc}\right)\\
+&\quad +\left(\Gamma^{a}_{bc}\Gamma^{b}_{ed}- \Gamma^{a}_{bd}\Gamma^{b}_{ec}\right)X^{e}
+- \left(\Gamma^{b}_{dc} - \Gamma^{b}_{cd}\right)\nabla_{b}X^{a}\\
+&= \left(\partial_{c}\partial_{d}-\partial_{d}\partial_{c}\right)X^{a}
++ \left(\partial_{c}\Gamma^{a}_{bd}-\partial_{d}\Gamma^{a}_{bc}\right)X^{b}
++\left(\Gamma^{a}_{bc}\Gamma^{b}_{ed}- \Gamma^{a}_{bd}\Gamma^{b}_{ec}\right)X^{e}
+- 0
+\end{aligned}
+\end{equation}
+so that
+\begin{equation}
+\begin{aligned}
+\left(\nabla_{c}\nabla_{d} - \nabla_{d}\nabla_{c}\right)X^{a}
+&=\left(\partial_{c}\partial_{d}-\partial_{d}\partial_{c}\right)X^{a}
++ \left(\partial_{c}\Gamma^{a}_{bd}-\partial_{d}\Gamma^{a}_{bc}\right)X^{b}
++\left(\Gamma^{a}_{bc}\Gamma^{b}_{ed}- \Gamma^{a}_{bd}\Gamma^{b}_{ec}\right)X^{e}\\
+&=\left(\partial_{c}\partial_{d}-\partial_{d}\partial_{c}\right)X^{a}
++ \left(\partial_{c}\Gamma^{a}_{bd}-\partial_{d}\Gamma^{a}_{bc}\right)X^{b}
++\left(\Gamma^{a}_{ec}\Gamma^{e}_{bd}- \Gamma^{a}_{ed}\Gamma^{e}_{bc}\right)X^{b}\\
+&=\left(\partial_{c}\partial_{d}-\partial_{d}\partial_{c}\right)X^{a}
++ \left(\partial_{c}\Gamma^{a}_{bd}-\partial_{d}\Gamma^{a}_{bc} + \Gamma^{a}_{ec}\Gamma^{e}_{bd}- \Gamma^{a}_{ed}\Gamma^{e}_{bc}\right)X^{b}
+\end{aligned}
+\end{equation}
+If we write
+\begin{equation}
+\left(\nabla_{c}\nabla_{d} - \nabla_{d}\nabla_{c}\right)X^{a}  = \left(\partial_{c}\partial_{d} - \partial_{d}\partial_{c}\right)X^{a} + R^{a}_{bcd} X^{b},
+\end{equation}
+where we define the \textit{Reimann tensor} is given by
+\begin{equation}
+R^{a}_{bcd} = \partial_{c}\Gamma^{a}_{bd}-\partial_{d}\Gamma^{a}_{bc} + \Gamma^{a}_{ec}\Gamma^{e}_{bd}- \Gamma^{a}_{ed}\Gamma^{e}_{bc}.
+\end{equation}
+
+
+

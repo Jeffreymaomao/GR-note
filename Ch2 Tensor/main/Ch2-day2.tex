@@ -1,0 +1,266 @@
+\subsubsubsection{Tangent space} % H4 title
+
+For a mani fold $M$
+
+\underline{Fig - tangent space}
+
+
+
+\begin{quote}
+	If $M$ is locally the same as $\mathbb{R}^n$, introducting coordinate patchs
+\begin{equation}
+\{U_1,U_2,\ldots\} = \text{atlas.}
+\end{equation}
+In the overlapping $U_\alpha \cap U_\beta \neq \phi$ , $\alpha\neq\beta$
+\underline{Fig - overlapping region}
+we have $x^{a} = x^{a}(y^1,y^2,\ldots,y^n)$, $a=1,2,\ldots,n$.
+\end{quote}
+
+\subsubsection{$\odot$ Tensor transformations of coordinates} % H3 title
+
+Consider a change of coordinates
+\begin{equation}
+x^{a}\mapsto x'^{a} = f^{a} (x^1,x^2,\ldots,x^n)\equiv x'^{a}(x)
+\end{equation}
+which means $x'$ is a function of $x$. We define
+
+\begin{quote}
+	\textbf{Definition}
+A matrix
+\begin{equation}
+{J'^{a}}_{b} \equiv \frac{\partial x'^{a}}{\partial x^{b}}
+\end{equation}
+called \textit{Jocobian matrix}, and
+\begin{equation}
+J'\equiv \abs{J'^{a}_{b}} = \det(J^{a}_{b}).
+\end{equation}
+Also, by implicit function theorem $x^{a} = x'^{a}(x')$, we have
+\begin{equation}
+J^{a}_{b} = \frac{\partial x'^{a}}{\partial x^{b}}.
+\end{equation}
+In fact $J'^{a}_{b}J^{b}_{c} = \delta^{a}_{c}$, then $J' = \det(J^{a}_{b}) = 1/J$. (Notice $\delta^{a}_{b}$ is the Kronecker delta function.)
+\end{quote}
+
+\begin{quote}
+	Rmk:
+\begin{equation}
+J'^{a}_{b} = \frac{\partial x'^{a}}{\partial x^{b}}
+= \begin{pmatrix}
+\frac{\partial x'^{1}}{\partial x^{1}} & \frac{\partial x'^{1}}{\partial x^{2}} & \cdots & \frac{\partial x'^{1}}{\partial x^{n}}\\
+\frac{\partial x'^{2}}{\partial x'^{1}} & \frac{\partial x^{2}}{\partial x^{2}} & \cdots & \frac{\partial x'^{2}}{\partial x^{n}}\\
+\vdots & \vdots & \ddots & \vdots \\
+\frac{\partial x'^{n}}{\partial x^{1}} & \frac{\partial x'^{n}}{\partial x^{2}} & \cdots & \frac{\partial x'^{n}}{\partial x^{n}}\\
+\end{pmatrix}
+\end{equation}
+
+\end{quote}
+\begin{quote}
+	Rmk:
+$\frac{\partial x^{a}}{\partial x'^{b}}$ can be viewd as coefficients of infinitesmall defferentials, then
+\begin{equation}
+\begin{aligned}
+dx'^{a} &=
+\frac{\partial x'^{a}}{\partial x^{1}}dx^{1}
++ \frac{\partial x'^{a}}{\partial x^{2}}dx^{2}
++ \cdots
++ \frac{\partial x'^{a}}{\partial x^{n}}dx^{n} \\
+&= \sum_{b=1}^{n} \frac{\partial x^{a}}{\partial x'^{b}} dx^{b}\\
+&= \frac{\partial x^{a}}{\partial x'^{b}} dx^{b},\quad \text{Einstein convension}
+\end{aligned}
+\end{equation}
+
+\end{quote}
+We shall classify geometric tensors quantities by transformation properties.
+
+\begin{quote}
+	\textbf{Definition}
+A \textit{contravariant} vector (rank-1) is a set of quantities $X^{a}$ defined on $p\in M$, such that under coordinate transformation:
+\begin{equation}
+x^{a}\mapsto x'^{a}(x),
+\end{equation}
+we have
+\begin{equation}
+X'^{a} = \frac{\partial x'^{a}}{\partial x^{b}} X^{b}
+\end{equation}
+\underline{Fig - point p in overlapping patch}
+\end{quote}
+
+\begin{quote}
+	e.g. tangent vector at $p$ in $M$.
+\underline{Fig - tangent vector at p on M}
+For $f$ is a function defined on the curve $\gamma$, where
+\begin{equation}
+f = f(x^{a}(u)),
+\end{equation}
+and
+\begin{equation}
+\frac{df}{du} = \frac{\partial f}{\partial x^{a}} \frac{dx^a}{du}
+\end{equation}
+holds for any $f$. Therefore
+\begin{equation}
+\frac{d}{du} = \left(\frac{dx^{a}}{du}\right)\frac{\partial}{\partial x^{a}},
+\end{equation}
+and here where $\partial / \partial x^{a}$​ is like a basis.
+Notice that, for $X'^{a} = dx^a/du$
+\begin{equation}
+X'^{a} = \frac{dx'^a}{du} = \frac{dx'^{a}}{dx^{b}}\frac{dx^{b}}{du} = \frac{dx'^{a}}{dx^{b}}X^{a},
+\end{equation}
+therefore, $dx^a/du$ is a contravariant vector.
+\end{quote}
+
+How about higher rank tensors? e.g. rank-2
+\begin{equation}
+X'^{ab} = \frac{\partial x^{a}}{\partial x^{c}}\frac{\partial x^{b}}{\partial x^{d}}X^{cd}.
+\end{equation}
+In general, for rank-$n$ tensor
+\begin{equation}
+X'^{i_1,\ldots,i_n} =
+\frac{\partial x^{i_1}}{\partial x^{j_1}}
+\frac{\partial x^{i_2}}{\partial x^{j_2}}
+\cdots
+\frac{\partial x^{i_3}}{\partial x^{j_3}}
+X'^{j_1,\ldots,j_n}
+\end{equation}
+
+
+\begin{quote}
+	Rmk:
+For a scalar $\phi$ (without indices or rank-0), we have
+\begin{equation}
+\phi'(x') = \phi(x)
+\end{equation}
+Here, notice $\phi'$ is not the differentiation of function $\phi$.
+\end{quote}
+
+\begin{quote}
+	\textbf{Definition}
+A covarariant vector (rank-1) is a set of quantities $X_a$ defined at $p\in M$, such that under coordinate transformation, we have
+\begin{equation}
+X'_{a} = \frac{\partial x^b}{\partial x'^a} X_b.
+\end{equation}
+e.g. a gradient of $\phi$
+\begin{equation}
+\frac{\partial \phi}{\partial x'^{a}} = \frac{\partial \phi}{\partial x^{b}} \frac{\partial x^{b}}{\partial x'^{a}},
+\end{equation}
+
+\end{quote}
+Also, for rank-2 covariant vector 
+\begin{equation}
+X'_{ab} = \frac{\partial x^{c}}{\partial x^{a}} \frac{\partial x^{d}}{\partial x^{b}} X_{cd}
+\end{equation}
+If a tensor has a form:
+\begin{equation}
+X^{a_1,\ldots,a_{p}}_{b_1,\ldots,b_q},
+\end{equation}
+we called a \textit{mixed-type} tensor denoted by $(p,q)$ type (up,down).
+
+In summary:
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{cc}
+\hline
+tensor & Type \\ \hline
+$\phi$ & $(0,0)$ \\
+$X^{a}$ & $(1,0)$ \\
+$X_{a}$ & $(0,1)$ \\
+$X^{ab}$ & $(2,0)$ \\
+$X_{ab}$ & $(0,2)$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsubsection{Coordinate-independent} % H4 title
+
+Physical laws are described by tensor equatios which are coordinates-independent, e.g. Suppose a law is written in the form
+\begin{equation}
+X_{ab} = Y_{ab}
+\end{equation}
+in $x$-system, $X$ and $Y$must the same type, since the physical laws must valid in any system. We rewrite the equation to $X_{ab} - Y_{ab} = 0$, and this equation must holds for $X'_{cd} - Y'_{cd} = 0$, and since the transformation is 
+\begin{equation}
+\begin{aligned}
+X'_{cd} = \frac{\partial x^{a}}{\partial x'^{c}} \frac{\partial x^{d}}{\partial x'^{b}} X_{cd}\\
+Y'_{cd} = \frac{\partial x^{a}}{\partial x'^{c}} \frac{\partial x^{d}}{\partial x'^{b}} Y_{cd}
+\end{aligned}
+\end{equation}
+so that
+\begin{equation}
+\left(X'_{ab} - Y'_{ab}\right) = \frac{\partial x^{a}}{\partial x'^{c}} \frac{\partial x^{d}}{\partial x'^{b}}  \left(X_{ab} - Y_{ab}\right) = 0
+\end{equation}
+
+
+\paragraph{example} % H5 title
+
+Maxwell's equations for $\vec{E} = (E_1,E_2,E_3)$ and $\vec{B} = (B_1,B_2,B_3)$ is given by
+\begin{equation}
+F_{\mu\nu} = - F_{\mu\nu},
+\end{equation}
+where the tensor is
+\begin{equation}
+F_{\mu\nu}=
+\begin{pmatrix}
+0			&E_{1}/c	&E_{2}/c	&E_{3}/c\\
+-E_{1}/c	&0			&-B_{3}		&B_{2}\\
+-E_{2}/c	&B_{3}		&0			&-B_{1}\\
+-E_{3}/c	&-B_{2}		&B_{1}		&0
+\end{pmatrix}
+\end{equation}
+and for $j^{\mu} = \left(\rho c,\vec{J}\right)$, we have
+\begin{equation}
+\partial_{\mu}F^{\mu\nu} = j^{nu},
+\end{equation}
+rand-1 controvariant equation under Lorentz transformation $x'^{\mu} = x^{\mu}(x)$​ .
+
+\subsubsection{$\odot$ Tensor fiels} % H3 title
+
+\begin{quote}
+	\textbf{Definition}
+Over $M$, we asign smoothly every point a tensor, which forms a tensor field.
+\end{quote}
+
+e.g. a vector field
+
+\underline{Fig - vector field}
+
+Now, we denote as 
+\begin{equation}
+X^{ab}(x),\quad x\in M.
+\end{equation}
+
+
+\subsubsection{$\odot$ Elementary operation of tensors} % H3 title
+
+\paragraph{1. Addition} % H5 title
+
+For three $(1,2)$-type tensors $X^{a}_{bc}$, $Y^{a}_{bc}$ and $X^{a}_{bc}$, we have
+\begin{equation}
+X^{a}_{bc} = Y^{a}_{bc} + Z^{a}_{bc}
+\end{equation}
+
+
+\paragraph{2. scalar multiplication} % H5 title
+
+For $k\in\mathbb{R}$, we have $kX^{a}_{bc}$
+
+\paragraph{3. symmetrization} % H5 title
+
+
+\begin{equation}
+\begin{aligned}
+X_{ab} &= \frac{1}{2}\left(X^{ab} + X^{ba}\right) + \frac{1}{2}\left(X^{ab} - X^{ba}\right)\\
+&= X_{(a,b)} + X_{[a,b]}
+\end{aligned}
+\end{equation}
+
+then 
+\begin{equation}
+\begin{aligned}
+X_{(a,b)} &= + X_{(b,a)}\\
+X_{[a,b]} &= - X_{[b,a]}
+\end{aligned}
+\end{equation}
+
+
+and $X_{(a,b)}$ called symmetric tensor, $X_{[a,b]}$ called anti-symmetric tensor.
+
+

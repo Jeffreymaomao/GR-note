@@ -1,0 +1,208 @@
+\section{Tensors} % H1 title
+
+\begin{quote}
+	Tensors is \textit{generalization of vector}.
+\end{quote}
+
+\begin{itemize}
+	\item What;s tensors
+	\item Tensors Algebra
+	\item Tensor differentiation
+	\item Tensor integration
+
+\end{itemize}
+\subsection{Introduction} % H2 title
+
+\begin{itemize}
+	\item \textbf{Newtonian mechanics} $\Rightarrow$ ODE
+	\item \textbf{Quantum physics} $\Rightarrow$ Linear Algebra
+	\item \textbf{Relativity} $\Rightarrow$ Tensor Calculus
+
+\end{itemize}
+\subsubsection{Vector} % H3 title
+
+\begin{quote}
+	Ex.
+\underline{Ch2 - Fig2}
+$\vec{A}$ is a vector
+\begin{equation}
+\vec{A} = A_1\hat{e}_1 + A_2 \hat{e}_2 = A'_1\hat{e}'_1 + A'_2 \hat{e}'_2
+\end{equation}
+and
+\begin{equation}
+\begin{pmatrix}
+A'_1\\A'_2
+\end{pmatrix}
+=
+R(\theta)
+\begin{pmatrix}
+A_1\\A_2
+\end{pmatrix}
+\end{equation}
+
+\end{quote}
+\begin{quote}
+	\textbf{Definition}
+A vector $\vec{A}$ is an object that tranforms as the same as $\vec{r}$​ under axis rotation.
+\end{quote}
+
+In matrix notation:
+\begin{equation}
+A_i' = \sum_{j=1}^{n}R_{ij}(\theta) A_j,\quad \text{in $\mathbb{R}^n$}
+\end{equation}
+We denote as 
+\begin{equation}
+A'_i = R_{ij}A_j,
+\end{equation}
+also called Einstein's convention (\textit{Summing over repested indeces.})
+
+\subsubsection{Tensor} % H3 title
+
+\textbf{Definition}
+
+A rank-2 tensor $A_{ij}$ is an object such that each index transforms like a vector.
+
+i.e.
+\begin{equation}
+A'_{ij} = R_{ik}R_{g\ell}A_{k\ell}
+\end{equation}
+
+
+In general, a rank-$n$ tensor $A_{i_1,\ldots,i_n}$ transformation as 
+\begin{equation}
+A'_{i_1,\ldots,i_n} = R_{i_1,j_1}R_{i_2,j_2}\cdots R_{i_n,j_n}\cdot A_{j_1,\ldots,j_n}
+\end{equation}
+
+
+\begin{quote}
+	Rmk:
+\begin{itemize}
+	\item In $\mathbb{R}^{n}$, $\{\hat{e}_1,\hat{e}_2,\ldots,\hat{e}_n\}$ are constant basis.
+
+	\item In polar coordinate system, basis are not constant
+
+\underline{Ch1 - Fig 2 polar}
+\end{itemize}
+
+\end{quote}
+\subsection{Manifold and coordinate} % H2 title
+
+\begin{quote}
+	Manifold (mfld) 流形
+\end{quote}
+
+What is the dimension of a manifold $M$ ?
+
+\underline{Fig3 - A manifold locally likes $R^n$}
+
+\textbf{Definition}
+
+An $n$-dimension manifold $M$ is something which locally look like $\mathbb{R}^n$.
+\begin{equation}
+\begin{aligned}
+x^{i} :
+&U \to \mathbb{R}^n\\
+&p \mapsto  x(p)
+\end{aligned}
+\end{equation}
+
+
+\begin{quote}
+	Ex.
+$M = S^2$ (Two sphere)
+\underline{Fig4 - sphere}
+\end{quote}
+
+\begin{quote}
+	Rmk.
+If $(x^{1},x^{2},\ldots,x^{n})$ be a set of $n$ coordinates , which is non-degenerate if
+\begin{equation}
+p \longleftrightarrow (x^{1},x^{2},\ldots,x^{n})
+\end{equation}
+is 1-1 or \textit{one-to-one mapping}.
+e.g.
+\underline{Fig4 - degenerate sphere}
+\end{quote}
+
+In overlapping region
+
+\underline{Fig5 - overlapping}
+
+\begin{quote}
+	Ex. \textbf{stereo graphic projection}
+spherical coordinate $\theta,\varphi$, notice that it is singular at $\theta = 0$ (north pole) and $\theta = \pi$ (south pole).
+\begin{equation}
+x^2+y^2+z^2=1
+\end{equation}
+\underline{Fig6 - projection}
+\begin{itemize}
+	\item $U_N$:
+
+\begin{equation}
+\begin{aligned}
+&(x,y,z-1) = \lambda (X,Y,-1)\\
+&\Rightarrow \frac{x}{X} = \frac{y}{Y} = \frac{z-1}{-1} = \lambda\\
+&\Rightarrow \begin{cases}
+\displaystyle X= \frac{x}{\lambda} = \frac{x}{1-z}\\
+\displaystyle Y= \frac{y}{\lambda} = \frac{y}{1-z}
+\end{cases}
+\end{aligned}
+\end{equation}
+
+	\item $U_S$:
+
+\begin{equation}
+\begin{aligned}
+&(x,y,z-1) = \lambda (X,Y,+1)\\
+&\Rightarrow \frac{x}{X} = \frac{y}{Y} = \frac{z+1}{+1} = \lambda\\
+&\Rightarrow \begin{cases}
+\displaystyle X= \frac{x}{\lambda} = \frac{x}{1+z}\\
+\displaystyle Y= \frac{y}{\lambda} = \frac{y}{1+z}
+\end{cases}
+\end{aligned}
+\end{equation}
+
+Then, the manifold $M = U_{N}\cup U_{S}$, where $U_{N}\cap U_{S}=\phi$. And we called
+	\item Two subset $U_N$ and $U_S$ to be a \textit{patch} of covering (覆蓋).
+	\item The set $\{U_N,U_S\}$ is the Altas.
+
+
+
+\textbf{Claim}
+For a point
+\begin{equation}
+p\in U_{N}\cap U_S
+\end{equation}
+we have
+\begin{equation}
+\begin{cases}
+\displaystyle X' = \frac{X}{X^2+Y^2}\\
+\displaystyle Y' = \frac{Y}{X^2+Y^2}
+\end{cases}
+\end{equation}
+coordinate transformation between 2 system.
+\end{itemize}
+
+\end{quote}
+\subsubsubsection{Tensors on $M$} % H4 title
+
+The tensors on $M$ are geometric quantities that obey coordinate transformation in overlapping region.
+
+\subsubsubsection{Curve on $M$} % H4 title
+
+\underline{Fig7 - curves on M}
+
+In general, an $m$-dimension object in $M$ can be parametrized by
+\begin{equation}
+x^{a} = x^{a}\left(u^1,u^2,\ldots,u^m\right), \quad a = 1,2,\ldots,n
+\end{equation}
+
+
+\begin{quote}
+	In particular, if $m=n-1$​, i.e.
+\begin{equation}
+x^{a} = x^{a} \left(u^1,u^2,\ldots,u^{n-1}\right), \quad a = 1,2,\ldots,n
+\end{equation}
+is a \textit{hypersurface}. We also using a function $f(x^{1},x^{2},\ldots,x^{n})=0$.
+\end{quote}
+

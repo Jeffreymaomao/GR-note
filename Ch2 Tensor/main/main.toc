@@ -1,0 +1,48 @@
+\contentsline {section}{\numberline {1}Tensors}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Introduction}{3}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Vector}{3}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Tensor}{3}{subsubsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.2}Manifold and coordinate}{4}{subsection.1.2}%
+\contentsline {subsubsubsection}{\numberline {1.2.0.1}Tensors on $M$}{5}{subsubsubsection.1.2.0.1}%
+\contentsline {subsubsubsection}{\numberline {1.2.0.2}Curve on $M$}{5}{subsubsubsection.1.2.0.2}%
+\contentsline {subsubsubsection}{\numberline {1.2.0.3}Tangent space}{6}{subsubsubsection.1.2.0.3}%
+\contentsline {subsubsection}{\numberline {1.2.1}$\odot $ Tensor transformations of coordinates}{6}{subsubsection.1.2.1}%
+\contentsline {subsubsubsection}{\numberline {1.2.1.1}Coordinate-independent}{8}{subsubsubsection.1.2.1.1}%
+\contentsline {paragraph}{example}{9}{section*.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}$\odot $ Tensor fiels}{9}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}$\odot $ Elementary operation of tensors}{9}{subsubsection.1.2.3}%
+\contentsline {paragraph}{1. Addition}{9}{section*.2}%
+\contentsline {paragraph}{2. scalar multiplication}{9}{section*.3}%
+\contentsline {paragraph}{3. symmetrization}{9}{section*.4}%
+\contentsline {paragraph}{4. tensor product}{10}{section*.5}%
+\contentsline {paragraph}{5. tensor contraction}{10}{section*.6}%
+\contentsline {subsubsection}{\numberline {1.2.4}Vector fields}{11}{subsubsection.1.2.4}%
+\contentsline {subsubsubsection}{\numberline {1.2.4.1}Two vector field}{13}{subsubsubsection.1.2.4.1}%
+\contentsline {subsection}{\numberline {1.3}Tensor Calculus}{14}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}$\odot $ Lie derivative}{15}{subsubsection.1.3.1}%
+\contentsline {subsubsubsection}{\numberline {1.3.1.1}Summary}{16}{subsubsubsection.1.3.1.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}$\odot $ Covariant differentiation}{17}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}$\odot $ Affine Geodesics}{19}{subsubsection.1.3.3}%
+\contentsline {subsubsubsection}{\numberline {1.3.3.1}Affien geodesic}{19}{subsubsubsection.1.3.3.1}%
+\contentsline {subsection}{\numberline {1.4}Riemann tensor}{20}{subsection.1.4}%
+\contentsline {subsubsubsection}{\numberline {1.4.0.1}Second derivative}{20}{subsubsubsection.1.4.0.1}%
+\contentsline {subsubsection}{\numberline {1.4.1}Geodesic coordiante}{21}{subsubsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.5}Affine flatness}{22}{subsection.1.5}%
+\contentsline {subsubsection}{\numberline {1.5.1}$\odot $ Integrable connetion}{22}{subsubsection.1.5.1}%
+\contentsline {subsubsubsection}{\numberline {1.5.1.1}\textbf {Definition}:}{22}{subsubsubsection.1.5.1.1}%
+\contentsline {subsubsubsection}{\numberline {1.5.1.2}Lemma 1.}{22}{subsubsubsection.1.5.1.2}%
+\contentsline {paragraph}{proof $\Rightarrow $ (necessary)}{22}{section*.7}%
+\contentsline {paragraph}{proof $\Leftarrow $ (sufficient)}{22}{section*.8}%
+\contentsline {subsubsubsection}{\numberline {1.5.1.3}Lemma 2}{23}{subsubsubsection.1.5.1.3}%
+\contentsline {paragraph}{proof $\Rightarrow $ (necessary)}{23}{section*.9}%
+\contentsline {paragraph}{proof $\Leftarrow $ (sufficient)}{23}{section*.10}%
+\contentsline {subsubsubsection}{\numberline {1.5.1.4}Recall}{23}{subsubsubsection.1.5.1.4}%
+\contentsline {subsection}{\numberline {1.6}Metric}{24}{subsection.1.6}%
+\contentsline {subsubsubsection}{\numberline {1.6.0.1}Def: (Riemannian manifold)}{24}{subsubsubsection.1.6.0.1}%
+\contentsline {subsubsubsection}{\numberline {1.6.0.2}Geodesic equation}{25}{subsubsubsection.1.6.0.2}%
+\contentsline {subsubsection}{\numberline {1.6.1}$\odot $ Affine flatness}{26}{subsubsection.1.6.1}%
+\contentsline {subsubsubsection}{\numberline {1.6.1.1}Def: (metric flatness)}{26}{subsubsubsection.1.6.1.1}%
+\contentsline {subsubsubsection}{\numberline {1.6.1.2}Theorem: (metrix flatness)}{26}{subsubsubsection.1.6.1.2}%
+\contentsline {subsection}{\numberline {1.7}Riemannian tensor}{26}{subsection.1.7}%
+\contentsline {subsubsubsection}{\numberline {1.7.0.1}symmetry}{26}{subsubsubsection.1.7.0.1}%
+\contentsline {subsubsubsection}{\numberline {1.7.0.2}summation}{27}{subsubsubsection.1.7.0.2}%
